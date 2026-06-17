@@ -341,10 +341,6 @@ export class CorgiFiestaScene extends Phaser.Scene {
     this.updateObjects(dt, scrollSpeed);
     this.updateSpawning(dt, fiestaActive);
 
-    if (boostActive && !fiestaActive) {
-      this.spawnDust(this.corgiX + 8 * this.unit, this.groundY - 8 * this.unit, 1);
-    }
-
     if (fiestaActive) {
       this.fiestaConfettiIn -= dt;
       if (this.fiestaConfettiIn <= 0) {
